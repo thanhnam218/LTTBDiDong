@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var markMass = 78;
+        var markHeight = 1.69;
+        var markBMI = markMass / markHeight ** 2
+        console.log("Mark's BMI is " + (markBMI))
+
+        var johnMass = 92;
+        var johnHeight = 1.95;
+        var johnBMI = johnMass / johnHeight ** 2
+        console.log("John's BMI is " + (johnBMI))
+
+        var BMIfn = (mass, height) => {
+            return mass / height ** 2;
+        }
+
+        //var johnBMI = BMIfn(johnMass, johnHeight);
+        //var markBMI = BMIfn(markMass, markHeight);
+
+
+        if (markBMI > johnBMI) {
+            markBMI = true;
+            console.log("Mark has a higher BMI than John")
+        } else {
+            markBMI = false;
+            console.log("John has a higher BMI than Mark")
+        }
+        
+
+    </script>
+</body>
+
+</html>

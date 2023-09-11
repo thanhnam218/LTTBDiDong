@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var dolphinsScores = [96,108,89];
+    var koalasScores = [88,91,110];
+    var dolphinsAverage = dolphinsScores.reduce((accumulator, score) => {
+        return accumulator += score;
+    }) / dolphinsScores.length;
+    let koalasAverage = koalasScores.reduce((accumulator, score) => {
+        return accumulator += score;
+    }) / koalasScores.length;
+    console.log("Dolphins "+dolphinsAverage);
+    console.log("Koalas "+koalasAverage);
+    if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
+        console.log("Dolphins win !");
+    } else if (dolphinsAverage < koalasAverage && koalasAverage >= 100) {
+        console.log("Koalas win !");
+    } else if (dolphinsAverage === koalasAverage && dolphinsAverage >= 100 && koalasAverage >= 100) {
+        console.log("Equals!");
+    }else{
+        console.log("No one win!!! Score < 100");
+    }
+    </script>
+</body>
+</html>
